@@ -1,0 +1,233 @@
+.line{
+    height: 5rpx;
+    background-color: #273b7a;
+    margin: 20rpx 70rpx;
+}
+input{
+    height: 30px;
+    border-bottom: 2px solid silver;
+    margin: 10rpx 0;
+  }
+.topinfo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #273b7a;
+    padding: 30rpx 0 60rpx 0;
+}
+.topinfo .topinfo-line{
+    padding: 5rpx 0 5rpx 0;
+}
+.topinfo .topinfo-line-text{
+    font-size: 38rpx;
+    font-weight: normal;
+    color: #DDDDDD;
+}
+.lineLayout{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: flex-start; */
+    justify-content: center;
+    align-items: center;
+    margin: 20rpx 20rpx;
+    /* width: 80%; */
+    align-items: center;
+  }
+.wordstyle1{
+    text-align: center;
+    word-break: break-all;
+    color: #206b7e;
+    font-weight: bold;
+}
+.wordstyle2{
+    text-align: center;
+    word-break: break-all;
+    font-size: 35rpx;
+}
+.password-hint-button
+{
+	width: 50rpx;
+	height: 50rpx;
+	top: 10rpx;
+	right: 0rpx;
+	font-size: 60rpx;
+	line-height: 38rpx;
+	color: #273b7a;
+	border-width: 0;
+	border: 2px solid #273b7a;
+	border-radius: 16rpx;
+    text-align: center;
+    justify-items: center;
+    align-content: center;
+}
+.textLayout{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;  /* 水平居中 */
+    align-items: center;
+}
+.buttonStyle{
+    width: 80%;
+    font-size: 30rpx;
+    margin-top: 20rpx;
+    background-color: #273b7a;
+    color: white;
+    border-radius: 98rpx;
+}
+
+.main
+{
+	padding: 20rpx 0 0 0;
+}
+.main .main-form
+{
+	margin: 0;
+}
+.main .main-form .main-form-section
+{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+
+	padding: 20rpx 30rpx 10rpx 30rpx;
+}
+
+.main .main-form .main-form-label
+{
+	flex: 1;
+
+	color: #273b7a;
+	font-weight: bold;
+	padding: 10rpx 20rpx 10rpx 0;
+}
+.main .main-form .main-form-content
+{
+	position: relative;
+}
+
+.main .main-form .main-form-textarea
+{
+	width: 100%;
+	height: 120rpx;
+	padding-bottom: 10rpx;
+	border-bottom: 2px solid #273b7a;
+}
+.main .main-form .main-form-textarea-placeholder
+{
+	color: #505b80;
+}
+
+.main .main-form .main-form-input
+{
+	height: 90rpx;
+	border-bottom: 2px solid #273b7a;
+}
+.main .main-form .main-form-input-placeholder
+{
+	color: #505b80;
+}
+
+
+/**
+ *	password hint
+ */
+.main .main-form .main-form-content .password-hint-input
+{
+	margin-right: 100rpx;
+}
+.main .main-form .main-form-content .password-hint-button
+{
+	position: absolute;
+	width: 76rpx;
+	height: 76rpx;
+	top: 10rpx;
+	right: 0rpx;
+	font-size: 60rpx;
+	line-height: 38rpx;
+	color: #273b7a;
+	border-width: 0;
+	border: 2px solid #273b7a;
+	border-radius: 16rpx;
+	text-align: center;
+}
+
+
+
+/**
+ *	password hint list
+ */
+.top-view
+{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+    top: 0;
+    left: 0;
+
+	display: flex;
+	flex-direction:row;
+
+    z-index: 5000;
+	background-color: rgba( 0, 0, 0, 0.2 );
+}
+.top-view .space-left
+{
+	flex: 0 0 30rpx;
+}
+.top-view .space-right
+{
+	flex: 0 0 30rpx;
+}
+.top-view .password-hint
+{
+	flex: 1;
+
+	margin: 30rpx 0 30rpx 0;
+
+	border: 2px solid #273b7a;
+	border-radius: 10rpx;
+	background-color: #fff;
+}
+.top-view .password-hint .password-hint-wrap
+{
+	display: flex;
+	flex-direction:column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+
+	width: 100%;
+	height: 100%;
+}
+.top-view .password-hint .password-hint-wrap .password-hint-wrap-title
+{
+	height: 120rpx;
+	color: #273b7a;
+	font-weight: bold;
+	text-align: center;
+	line-height: 120rpx;
+}
+.top-view .password-hint .password-hint-wrap .password-hint-wrap-list
+{
+	flex: 1;
+	height: 100%;
+	overflow-y: auto;
+
+	padding: 0rpx 10rpx 20rpx 40rpx;
+}
+.top-view .password-hint .password-hint-wrap .password-hint-wrap-list .password-hint-wrap-list-item
+{
+	color: #273b7a;
+	padding: 0 0 30rpx 0;
+}
+.top-view .password-hint .password-hint-wrap .password-hint-wrap-button
+{
+	flex: 0 0 120rpx;
+	padding: 10rpx 0 20rpx 0;
+}
+.top-view .password-hint .password-hint-wrap .password-hint-wrap-button .password-hint-wrap-button-close
+{
+	width: 90%;
+	color: #fff;
+	background-color: #273b7a;
+}

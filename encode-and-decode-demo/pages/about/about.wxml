@@ -1,0 +1,20 @@
+<!--index.wxml-->
+<import src="../common/foot.wxml" />
+<view class="container">
+	<!-- product -->
+	<view class="product">
+		<view>
+			<image
+				class="logo" 
+				src="../../resources/images/lock.png"></image>
+		</view>
+	</view>
+	<!-- main buttons -->
+	<view class="main">
+		<view class="main-body">
+			<label class="main-body-title">关于作者</label>
+			<text class="main-body-text">我是Quincey，一个分不清百事可乐和可口可乐的程序媛</text>
+		</view>
+	</view>
+	<template is="foot" />
+</view>

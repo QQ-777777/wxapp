@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/calculate/calculate",
+    "pages/about/about"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#273b7a",
+    "navigationBarTitleText": "Encode and Decode",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#fff",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "color": "#F8F8F8",
+    "selectedColor": "#FFF",
+    "backgroundColor": "#273b7a",
+    "borderStyle": "white",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "resources/icons/icon_send_81x81.png",
+        "selectedIconPath": "resources/icons/icon_send_sel_81x81.png"
+      },
+      {
+        "pagePath": "pages/calculate/calculate",
+        "text": "加密计算器",
+        "iconPath": "resources/icons/icon_receive_81x81.png",
+        "selectedIconPath": "resources/icons/icon_receive_sel_81x81.png"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "text": "关于",
+        "iconPath": "resources/icons/icon_about_81x81.png",
+        "selectedIconPath": "resources/icons/icon_about_sel_81x81.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

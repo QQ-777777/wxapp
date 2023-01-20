@@ -1,0 +1,78 @@
+<!--calculate.wxml-->
+<import src="../common/foot.wxml" />
+<view class="container">
+  <view class="topinfo">
+    <view class="topinfo-line">
+      <text class="topinfo-line-text">AES、移位密码加密与MD5、SHA1校验</text>
+    </view>
+  </view>
+
+  <view hidden="{{ bTextHintDlgShow }}">
+    <view class='lineLayout'>
+      <view>密文：</view>
+      <input type="text" bindblur='settext' placeholder="请输入加密文字" value='{{inputValue}}'></input>
+      <view style="margin-left: 30rpx" class="password-hint-button" bindtap="onTapShowTextHintDlg">...</view>
+      <view style="margin-left: 10rpx" class="password-hint-button" bindtap="clearText">×</view>
+    </view>
+
+    <button bindtap="createRandom" class='buttonStyle'>随机产生秘钥</button>
+
+    <view class="line"></view>
+    <view class="wordstyle1">ECB/128/KEY：</view>
+    <view class="wordstyle2">{{Key}}</view>
+    <view class="wordstyle1">AES加密后（16进制数）：</view>
+    <view class="wordstyle2">{{show_aes_encode}}</view>
+
+    <!-- <view class="wordstyle1">AES加密后base64：</view>
+  <view class="wordstyle2">{{show_aes_encodebase64}}</view> -->
+
+    <view class="wordstyle1">AES解密后：</view>
+    <view class="wordstyle2">{{show_aes_decode}}</view>
+
+    <!-- <view class="line"></view>
+  <view class="wordstyle1">base码加密后：</view>
+  <view class="wordstyle2">{{show_base64_encode}}</view>
+  <view class="wordstyle1">base码解密后：</view>
+  <view class="wordstyle2">{{show_base64_decode}}</view> -->
+
+    <view class="line"></view>
+    <view class="wordstyle1">移位密码秘钥：</view>
+    <view class="wordstyle2">{{show_caesar_key}}</view>
+    <view class="wordstyle1">移位密码加密后：</view>
+    <view class="wordstyle2">{{show_caesar_encode}}</view>
+    <view class="wordstyle1">移位密码解密后：</view>
+    <view class="wordstyle2">{{show_caesar_decode}}</view>
+
+    <view class="line"></view>
+    <view class="wordstyle1">MD5码校验后：</view>
+    <view class="wordstyle2">{{show_md5}}</view>
+    <view class='textLayout'>
+      <view class="wordstyle1">计算文件的MD5码：</view>
+      <view bindtap="calcFileMd5" class="password-hint-button">...</view>
+    </view>
+    <view class="wordstyle2">{{show_filemd5}}</view>
+
+    <view class="wordstyle1">SHA1码校验后：</view>
+    <view class="wordstyle2">{{show_sha1}}</view>
+  </view>
+  <!-- 预置密文 -->
+  <view class="top-view" hidden="{{!bTextHintDlgShow}}">
+    <view class="space-left"></view>
+    <view class="password-hint" animation="{{ animationData }}" hidden="{{ ! bTextHintDlgShow }}">
+      <view class="password-hint-wrap">
+        <view class="password-hint-wrap-title">预置加密文字</view>
+        <view class="password-hint-wrap-list">
+          <scroll-view scroll-y style="height: 98%;">
+            <view class="password-hint-wrap-list-item" data-index="{{ index }}" wx:key="*this"
+              wx:for="{{ arrPasswordHintList }}" bindtap="onTapTextHintItem">☖ {{ item }}</view>
+          </scroll-view>
+        </view>
+        <view class="password-hint-wrap-button">
+          <button class="password-hint-wrap-button-close" bindtap="onTapHideTextHintDlg">关闭</button>
+        </view>
+      </view>
+    </view>
+    <view class="space-right"></view>
+  </view>
+  <template is="foot" />
+</view>

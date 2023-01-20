@@ -1,0 +1,25 @@
+<!--index.wxml-->
+<import src="../common/foot.wxml" />
+<view class="container">
+	<!-- top info -->
+	<swiper indicator-dots="true" autoplay="true" interval="{{interval}}" duration="{{duration}}" circular="true">
+        <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+            <swiper-item>
+                <image src="{{item}}" class="slide-image" width="100%"/>
+            </swiper-item>
+        </block>
+    </swiper>
+
+	<!-- product -->
+	<view class="product">
+		<view>
+			<image
+				class="logo" 
+				src="../../resources/images/lock.png"></image>
+		</view>
+		<view class="textStyle">
+			这是一个加密计算器，可实现AES、移位密码加密与MD5、SHA1校验
+		</view>
+	</view>
+  <template is="foot" />
+</view>

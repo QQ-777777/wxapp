@@ -1,0 +1,5 @@
+<template name="foot">
+  <view class="page-foot">
+    <view class="index-desc" style="text-align:center; margin-top: 20rpx">Encode and Decode Demo By Quincey</view>
+  </view>
+</template>
